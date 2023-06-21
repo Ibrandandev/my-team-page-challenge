@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=PT+Serif:wght@400;700&family=Poppins:wght@400;600&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+  margin: 3rem 0;
+}
+
+h1 {
+  font-size: 2.25rem;
+  font-family: "PT Serif", serif;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 1rem 0;
+}
+
+header p {
+  font-size: 0.875rem;
+  font-family: Poppins;
+  max-width: 90%;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: 45% 45%;
+}
+
+.person {
+  margin-left: 1rem;
+  margin-bottom: 2rem;
+}
+
+.person:nth-child(even) {
+  margin-left: 2rem;
+  margin-top: 3rem;
+}
+
+.person > div {
+  display: flex;
+}
+
+.person__img {
+  width: 150px;
+  height: 250px;
+}
+
+.person__role {
+  writing-mode: vertical-lr;
+  font-size: 10px;
+  font-family: PT Serif;
+  text-transform: uppercase;
+  padding-left: 7px;
+}
+
+.person__name {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+footer {
+  margin-top: auto;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+footer p {
+  font-size: 0.875rem;
+  font-family: Montserrat;
+  color: #a9a9a9;
+}
+
+@media (width >= 1200px) {
+  .container {
+    width: 65vw;
+    margin: 0 auto;
+  }
+
+  header {
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 2rem auto;
+  }
+
+  header p {
+    max-width: 430px;
+    font-size: 1.1rem;
+  }
+
+  .gallery {
+    grid-template-columns: auto auto auto;
+    justify-content: space-between;
+  }
+  .person:nth-child(even) {
+    margin-left: 1rem;
+    margin-top: 0;
+  }
+
+  .person:nth-child(2),
+  .person:nth-child(5) {
+    margin-top: 5rem;
+  }
+
+  .person__img {
+    width: 230px;
+    height: 350px;
+  }
+  .person__role {
+    font-size: 0.9rem;
+  }
+  .person__name {
+    font-size: 1.1rem;
+  }
+}
